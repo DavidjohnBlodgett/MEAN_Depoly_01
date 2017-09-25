@@ -1,0 +1,10 @@
+<main>
+    <nav>
+        <a [routerLink]="['/home']" class='block'>Home</a>
+        <div style="border-left:1px solid #000;height:20px" class='block'></div>
+        <a [routerLink]="['/new_question']" class='block'>Add a question</a>
+        <div style="border-left:1px solid #000;height:20px" class='block'></div>
+        <a [routerLink]="['']">Log off</a>
+    </nav>
+    <router-outlet></router-outlet>
+</main>

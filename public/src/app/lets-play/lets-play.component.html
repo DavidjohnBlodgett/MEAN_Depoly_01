@@ -1,0 +1,20 @@
+<p>
+  lets-play works!
+</p>
+<main>
+    <form (submit)='onSubmit()' #questionForm='ngForm'>
+        <section *ngFor='let i of questions' class="border">
+            <p>1.{{i.content}}</p>
+                <input type="radio" [name]="i._id" [value]="i.answer">{{i.answer}}<br>
+                <input type="radio" [name]="i._id" [value]="i.fakeAnswerOne">{{i.fakeAnswerOne}}<br>
+                <input type="radio" [name]="i._id" [value]="i.fakeAnswerTwo">{{i.fakeAnswerTwo}}<br>
+        </section>
+        <div class="buttons" id='buttons'>
+            <form (submit)='onCancel()' #cancelForm='ngForm' class="buttons">
+                <button type="button" name="button" class="button">Cancel</button>
+            </form>
+            <button type="submit" name="button" class="button">Submit</button>
+
+        </div>
+    </form>
+</main>

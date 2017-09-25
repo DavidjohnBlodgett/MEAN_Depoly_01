@@ -1,0 +1,43 @@
+table, th, td {
+    border: 1px solid black;
+
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th {
+    background-color: #cccccc;
+}
+
+th, td {
+    /*padding: 15px;*/
+    text-align: left;
+}
+
+tr:nth-child(even) {
+    background-color: #eee
+}
+
+#search {
+    text-align: right;
+}
+
+.button {
+    background-color: #2b78e4;
+    color: white;
+    margin: 20px;
+    width: 200px;
+    border: 1px solid black;
+    -webkit-box-shadow: 2px 2px 0 0 #ADADAD;
+    box-shadow: 2px 2px 0 0 #ADADAD;
+    text-align: center;
+}
+
+#playForm {
+    background-color: #dddddd;
+    border: 1px solid black;
+    text-align: center;
+}

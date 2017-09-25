@@ -1,0 +1,66 @@
+<main>
+    <h1>New Question</h1>
+    <form (submit)='onSubmit()' #mySubmitForm='ngForm'>
+        <table>
+            <tr>
+                <td>
+                    Question
+                </td>
+                <td>
+                    <textarea name="content" rows="8" cols="80"
+                        required
+                        minlength="15"
+                        [(ngModel)]='questionForm.content'
+                        #content='ngModel'
+                    ></textarea>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    Correct Answer:
+                </td>
+                <td>
+                    <textarea name="answer" rows="1" cols="80"
+                        required
+                        [(ngModel)]='questionForm.answer'
+                        #answer='ngModel'
+                    ></textarea>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    Fake Answer 1:
+                </td>
+                <td>
+                    <textarea name="fakeAnswerOne" rows="1" cols="80"
+                        required
+                        [(ngModel)]='questionForm.fakeAnswerOne'
+                        #fakeAnswerOne='ngModel'
+                    ></textarea>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    Fake Answer 2:
+                </td>
+                <td>
+                    <textarea name="fakeAnswerTwo" rows="1" cols="80"
+                        required
+                        [(ngModel)]='questionForm.fakeAnswerTwo'
+                        #fakeAnswerTwo='ngModel'
+                    ></textarea>
+                </td>
+            </tr>
+            <tr>
+                <form (submit)='onCancel()' #myCancelForm='ngForm'>
+                        <button type="submit" name="button">Cancel</button>
+                </form>
+                <button type="submit" name="button">Submit</button>
+            </tr>
+        </table>
+
+    </form>
+</main>
